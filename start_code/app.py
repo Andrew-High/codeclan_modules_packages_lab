@@ -1,8 +1,12 @@
 from modules.output import *
 # from modules.task_list import *
-from data.task_list import *
+# from data.task_list import *
 from modules.input import *
-  
+
+
+query = input("Do you want to do some tasks?")
+if(query.lower() == "y"):
+    from data.task_list import *
 while (True):
     print_menu()
     option = menu_select()
