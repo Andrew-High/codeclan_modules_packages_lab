@@ -1,5 +1,7 @@
 from modules.output import *
-from modules.task_list import *
+# from modules.task_list import *
+from data.task_list import *
+from modules.input import *
 
 def print_menu():
     print("Options:")
@@ -14,11 +16,11 @@ def print_menu():
     
 while (True):
     print_menu()
-    option = input("Select an option 1, 2, 3, 4, 5 or (Q)uit: ")
+    option = menu_select()
     if (option.lower() == 'q'):
         break
     if option == '1':
-        output.print_list(tasks)
+        print_list(tasks)
     elif option == '2':
         print_list(get_uncompleted_tasks(tasks))
     elif option == '3':
